@@ -1,0 +1,25 @@
+.hobbies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .hobbies-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .hobby-image {
+    width: 33.3333%; /* Adjusted to take full width without gaps */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .hobby-image:hover {
+    transform: scale(1.05);
+  }
+  
+  
