@@ -8,7 +8,6 @@ const ChatBotComponent = () => {
     { from: 'bot', text: 'I am a helpful assistant.' }
   ]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
   const [isMinimized, setIsMinimized] = useState(false);
 
   const handleSubmit = async (event) => {
@@ -18,7 +17,6 @@ const ChatBotComponent = () => {
       setMessages(newMessages);
       setUserMessage('');
       setLoading(true);
-      setError('');
 
       try {
         const response = await fetch('http://51.20.250.190:5000/api/chat', {
@@ -33,10 +31,10 @@ const ChatBotComponent = () => {
         if (response.ok) {
           setMessages([...newMessages, { from: 'bot', text: data.response }]);
         } else {
-          setError(data.error || 'Failed to get response from the bot.');
+          setMessages([...newMessages, { from: 'bot', text: 'Sorry, I am not currently available. Please, reach out to Roger at rogerjeasy@gmail.com or contact.' }]);
         }
       } catch (err) {
-        setError('Failed to get response from the bot.');
+        setMessages([...newMessages, { from: 'bot', text: 'Sorry, I am not currently available. Please, reach out to Roger at rogerjeasy@gmail.com or contact.' }]);
       } finally {
         setLoading(false);
       }
@@ -70,7 +68,6 @@ const ChatBotComponent = () => {
               </div>
             ))}
             {loading && <div className="chat-message bot"><BeatLoader color="#36d7b7" /></div>}
-            {error && <div className="chat-message bot error">{error}</div>}
           </div>
           <form onSubmit={handleSubmit} className="chat-input-container">
             <input
@@ -95,4 +92,5 @@ const ChatBotComponent = () => {
 };
 
 export default ChatBotComponent;
+
 

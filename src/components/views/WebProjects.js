@@ -7,7 +7,7 @@ import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 const springBootIconUrl = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg';
 const expressIconUrl = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg';
-const openaiIconUrl = 'https://upload.wikimedia.org/wikipedia/commons/archive/c/c9/20210328085934%21OpenAI_Logo_%282%29.svg';
+const openaiIconUrl = 'https://upload.wikimedia.org/wikipedia/commons/c/c9/OpenAI_Logo_%282%29.svg';
 const gcpIconUrl = 'https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg';
 const typescriptIconUrl = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg';
 const firebaseIconUrl = 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg';
@@ -17,7 +17,7 @@ const iconMap = {
   React: faReact,
   'Node.js': faNodeJs,
   'Java Spring Boot': springBootIconUrl,
-  'JavaScript': javascriptIconUrl,
+  Javascript: javascriptIconUrl,
   'AWS (S3 and EC2)': faAws,
   MongoDB: faDatabase,
   Firebase: firebaseIconUrl,
@@ -25,7 +25,7 @@ const iconMap = {
   Express: expressIconUrl,
   OpenAI: openaiIconUrl, 
   'Google Cloud Platform': gcpIconUrl, 
-  TypeScript: typescriptIconUrl, 
+  Typescript: typescriptIconUrl, 
   Python: faPython,
 };
 

@@ -15,7 +15,7 @@
   height: 50px; /* Adjust size as needed */
   border-radius: 75%;
   object-fit: cover;
-  margin-right: 20px; /* Adjust spacing as needed */
+  margin-left: 20px; /* Increase spacing to the left */
 }
 
 .header-button {
@@ -27,10 +27,15 @@
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 5px;
+  margin-right: 10px; /* Decrease right margin to bring buttons closer */
 }
 
-.header-button:hover {
-  background-color: green; /* Change color to green on hover */
+.header-button:hover:not(.active) {
+  background-color: orange; /* Change color to orange on hover if not active */
+}
+
+.header-button.active {
+  background-color: green; /* Change color to green when active */
 }
 
 

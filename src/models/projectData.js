@@ -3,7 +3,7 @@ import Project from '../models/Project';
 const projectsData = [
   new Project(
     "Project: Personal Website",
-    "https://rogerjeasy.com/",
+    "http://mycv-client.s3-website.eu-north-1.amazonaws.com/",
     ["https://github.com/rogerjeasy/mycv-server", "https://github.com/rogerjeasy/mycv-client"],
     ["React", "Node.js", "Javascript", "Sass", "OpenAI", "AWS (S3 and EC2)", "Express"],
     [
@@ -14,20 +14,6 @@ const projectsData = [
       "Integrated Google reCAPTCHA to ensure user authenticity and prevent bot submissions",
       "Developed and implemented RESTful APIs using Express for robust server-side functionalities",
       "Successfully deployed the application on AWS for scalable and reliable hosting"
-    ]
-  ),
-
-  new Project(
-    "Project: Lisungui",
-    "http://lisungui-client.s3-website.eu-north-1.amazonaws.com/",
-    ["https://github.com/lisungui/lisungui-server", "https://github.com/lisungui/client"],
-    ["React", "Firebase", "Java Spring Boot", "Javascript", "Sass", "AWS (S3 and EC2)"],
-    [
-      "Developed frontend using React",
-      "Implemented the authentication with Google gmail, Github or Email/password for registering or loging",
-      "Implemented RESTful API with Express",
-      "Integrated Firebase Cloud Store for data storage",
-      "Deployed the application to Amazon Web Service"
     ]
   ),
   new Project(
@@ -43,7 +29,20 @@ const projectsData = [
       "Styled the application with Sass"
     ]
   ),
-  // Add more projects as needed
+ 
+  new Project(
+    "Project: Lisungui",
+    "http://lisungui-client.s3-website.eu-north-1.amazonaws.com/",
+    ["https://github.com/lisungui/lisungui-server", "https://github.com/lisungui/client"],
+    ["React", "Firebase", "Java Spring Boot", "Javascript", "Sass", "AWS (S3 and EC2)"],
+    [
+      "Developed frontend using React",
+      "Implemented the authentication with Google gmail, Github or Email/password for registering or loging",
+      "Implemented RESTful API with Express",
+      "Integrated Firebase Cloud Store for data storage",
+      "Deployed the application to Amazon Web Service"
+    ]
+  ),
 ];
 
 export default projectsData;

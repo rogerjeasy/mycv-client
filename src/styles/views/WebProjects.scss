@@ -108,13 +108,14 @@
 }
 
 .custom-icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
 }
 
 .openai-icon {
-  width: 48px; /* Increase the size of the OpenAI icon */
-  height: 48px; /* Increase the size of the OpenAI icon */
+  width: 48px;
+  height: 48px;
 }
 
 @media (max-width: 768px) {
@@ -131,5 +132,6 @@
     justify-content: center;
   }
 }
+
 
 
