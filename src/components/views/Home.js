@@ -12,7 +12,7 @@ const Home = () => {
         <div className="description-container">
           <div className="description">
             <p>
-              Hello, and thank you for visiting my page! My name is Roger Jeasy Bavibidila, and I am a PhD student at the Department of Informatics at the University of Zurich, conducting research under the esteemed supervision of Prof. Dr. Manuel Günther. My interests lie in the fields of Machine Learning, Deep Learning, Computer Vision, and Web Development.
+              Hello, and thank you for visiting my page! My name is Roger Jeasy Bavibidila, and I am a PhD student at the Artificial Intelligence and Machine Learning <a href="https://www.ifi.uzh.ch/en/aiml/people.html" target="_blank" rel="noopener noreferrer">(AIML)</a> research group at the Department of Informatics at the University of Zurich, conducting research under the esteemed supervision of <a href="https://www.ifi.uzh.ch/en/aiml/people/guenther.html" target="_blank" rel="noopener noreferrer">Prof. Dr. Manuel Günther</a>. My interests lie in the fields of Machine Learning, Deep Learning, Computer Vision, and Software and Web Development.
             </p>
             <p>
               My main research aims to enhance machine learning algorithms for face and object detection and recognition using Gabor wavelets. While deep neural networks have revolutionized many research areas with their impressive power, traditional image processing and feature extraction methods, like Gabor wavelets, have often been overlooked. Inspired by the visual cortex of mammals, Gabor wavelets offer a robust approach to face detection and recognition, continuing the work of pioneers such as Wiskott et al. who demonstrated their effectiveness in these tasks.
@@ -31,6 +31,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 

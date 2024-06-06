@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section about">
           <h2>About</h2>
-          <p>This portfolio showcases my journey and projects as a third-year PhD student at the University of Zurich, specializing in Machine Learning, Deep Learning, Computer Vision, and Web Development.</p>
+          <p>This portfolio showcases my journey and projects as a PhD student at the University of Zurich, specializing in Machine Learning, Deep Learning, Computer Vision, and Web Development.</p>
         </div>
         <div className="footer-section links">
           <h2>Site map</h2>

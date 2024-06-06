@@ -18,26 +18,118 @@
   margin-top: 0;
 }
 
-.project-links a {
+.project-links {
+  margin-top: 20px;
+}
+
+.project-links h3,
+.project-tasks h3,
+.project-tech-stack h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.project-links a,
+.links a {
   margin-right: 10px;
   color: #007bff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.project-links a:hover {
+.project-links a:hover,
+.links a:hover {
   color: #0056b3;
 }
 
-.project-tech-stack ul,
+.project-tasks {
+  margin-top: 20px; /* Add margin to create space between Live Project and Main Tasks Completed */
+}
+
 .project-tasks ul {
   list-style-type: disc;
   padding-left: 20px;
 }
 
-.project-tech-stack li,
-.project-tasks li {
-  margin-bottom: 5px;
+.project-tech-stack {
+  margin-top: 20px; /* Add margin to create space between Main Tasks Completed and Tech Stack */
 }
 
-  
+.project-tech-stack .tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.tech-icon span {
+  margin-left: 10px;
+}
+
+.fa-react {
+  color: #61DBFB; /* React color */
+}
+
+.fa-node-js {
+  color: #339933; /* Node.js color */
+}
+
+.fa-java {
+  color: #007396; /* Java color */
+}
+
+.fa-js {
+  color: #F7DF1E; /* JavaScript color */
+}
+
+.fa-aws {
+  color: #FF9900; /* AWS color */
+}
+
+.fa-database {
+  color: #4DB33D; /* Database color */
+}
+
+.fa-sass {
+  color: #CC6699; /* Sass color */
+}
+
+.fa-google {
+  color: #4285F4; /* Google color */
+}
+
+.fa-python {
+  color: #3776AB; /* Python color */
+}
+
+.custom-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.openai-icon {
+  width: 48px; /* Increase the size of the OpenAI icon */
+  height: 48px; /* Increase the size of the OpenAI icon */
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    text-align: center;
+  }
+
+  .project-links,
+  .project-tech-stack {
+    text-align: center;
+  }
+
+  .tech-icon {
+    justify-content: center;
+  }
+}
+
+
