@@ -2,9 +2,9 @@ import Project from '../models/Project';
 
 const projectMLData = [
   new Project(
-    "Machine Learning Intern at Earkick",
+    "Machine Learning Engineer Intern at Earkick",
     " ",
-    ["As a machine learning intern at Earkick, I worked on developing a machine learning model for music recommendation. The model was trained on a dataset of user listening history and music features to predict the next song a user would like to listen to. The model was deployed as a web application and integrated with the Earkick music platform."],
+    ["As a machine learning intern at Earkick, I worked on a project aimed at developing novel machine learning solutions to infer a person's mental health status from selfie videos, focusing on mood and anxiety prediction. We leveraged open-source video-based emotion recognition datasets and proprietary data from Earkick to train neural network models."],
     ["PyTorch", "OpenCV", "Python", "Git", "Hugging Face", "AWS", "Jupyter Notebook"],
     [
       "Data curation and management: Played a key role in the curation of training datasets, ensuring high-quality data for model training and analysis.",
@@ -17,7 +17,7 @@ const projectMLData = [
   new Project(
     "Research Assistant at the University of Pretoria",
     " ",
-    ["As a research assistant at the University of Pretoria, I worked on developing a machine learning model for predicting the spread of infectious diseases. The model was trained on a dataset of historical disease outbreaks and environmental factors to predict the likelihood of future outbreaks. The model was deployed as a web application and integrated with the university’s public health platform."],
+    ["As a research assistant at the University of Pretoria, I worked on the project \"Simulating Breeding Populations for Machine Learning.\" This project aimed to assess genetic parameters and experimental effects to enhance the performance of existing genomic selection (GS) methods through simulation studies. Additionally, the study employed machine learning models to perform GS, with the goal of improving the accuracy and efficiency of genomic predictions."],
     ["Python", "R", "TensorFlow", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
     [
       "Development of an automated pipeline for breeders: Spearheaded the creation of an innovative pipeline for the Forest Molecular Genetics Program Research Group. This tool enables the generation of synthetic breeding populations at no cost using AlphaSimR and QMSim simulation software.",

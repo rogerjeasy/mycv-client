@@ -2,20 +2,28 @@
   background-color: #333;
   padding: 10px 0;
   display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: space-around;
-  position: fixed; /* Make the header fixed */
-  top: 0; /* Position at the top */
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it stays on top */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
 }
 
 .profile-picture {
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
+  width: 50px;
+  height: 50px;
   border-radius: 75%;
   object-fit: cover;
-  margin-left: 20px; /* Increase spacing to the left */
+  margin-left: 20px;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .header-button {
@@ -27,15 +35,16 @@
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 5px;
-  margin-right: 10px; /* Decrease right margin to bring buttons closer */
+  margin-right: 10px;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .header-button:hover:not(.active) {
-  background-color: orange; /* Change color to orange on hover if not active */
+  background-color: orange;
 }
 
 .header-button.active {
-  background-color: green; /* Change color to green when active */
+  background-color: green;
 }
 
 

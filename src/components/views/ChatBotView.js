@@ -8,7 +8,7 @@ const ChatBotComponent = () => {
     { from: 'bot', text: 'I am a helpful assistant.' }
   ]);
   const [loading, setLoading] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(true);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -31,10 +31,10 @@ const ChatBotComponent = () => {
         if (response.ok) {
           setMessages([...newMessages, { from: 'bot', text: data.response }]);
         } else {
-          setMessages([...newMessages, { from: 'bot', text: 'Sorry, I am not currently available. Please, reach out to Roger at rogerjeasy@gmail.com or contact.' }]);
+          setMessages([...newMessages, { from: 'bot', text: 'Sorry, I am not currently available. Please, reach out to Roger at rogerjeasy@gmail.com' }]);
         }
       } catch (err) {
-        setMessages([...newMessages, { from: 'bot', text: 'Sorry, I am not currently available. Please, reach out to Roger at rogerjeasy@gmail.com or contact.' }]);
+        setMessages([...newMessages, { from: 'bot', text: 'Sorry, I am not currently available. Please, reach out to Roger at rogerjeasy@gmail.com' }]);
       } finally {
         setLoading(false);
       }

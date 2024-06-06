@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../../styles/views/Contact.scss'; // Assuming you have a CSS file for styling
+import '../../styles/views/Contact.scss'; // Ensure you have this file
+import { FadeLoader } from 'react-spinners';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,25 +10,18 @@ const Contact = () => {
     email: '',
     message: '',
   });
-  const [recaptchaToken, setRecaptchaToken] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false); // State to manage loading spinner
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleRecaptcha = (token) => {
-    setRecaptchaToken(token);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!recaptchaToken) {
-      setErrorMessage('Please complete the CAPTCHA');
-      return;
-    }
+    setLoading(true); // Show loader when the send button is clicked
 
     try {
       const response = await fetch('http://51.20.250.190:5000/send-email', {
@@ -35,7 +29,7 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...formData, recaptchaToken }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -53,12 +47,22 @@ const Contact = () => {
       }
     } catch (error) {
       setSuccessMessage('');
-      setErrorMessage('Failed to send your message. Please try again.');
+      setErrorMessage('Failed to send your message. Please try again. If the problem persists, please reach out to Roger at rogerjeasy@gmail.com');
+    } finally {
+      setLoading(false); // Hide loader after the request is completed
     }
   };
 
+  // Check if the required fields are filled
+  const areRequiredFieldsFilled = formData.firstName.trim() && formData.message.trim();
+
   return (
     <div className="contact-container">
+      {loading && (
+        <div className="overlay">
+          <FadeLoader color="#36d7b7" loading={loading} />
+        </div>
+      )}
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
@@ -109,20 +113,15 @@ const Contact = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <div
-            className="g-recaptcha"
-            data-sitekey="YOUR_SITE_KEY"
-            data-callback={handleRecaptcha}
-          ></div>
-        </div>
+
         <button
           type="submit"
           className="send-button"
-          disabled={!formData.firstName.trim() || !formData.message.trim()}
+          disabled={!areRequiredFieldsFilled}
         >
           Send
         </button>
+
         {successMessage && <p className="success-message">{successMessage}</p>}
         {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>
@@ -131,4 +130,8 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+
 

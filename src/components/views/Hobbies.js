@@ -2,6 +2,24 @@ import React, { useEffect, useState, useRef } from 'react';
 import '../../styles/views/Hobbies.scss';
 
 const Hobbies = () => {
+  const [switzerlandImages, setSwitzerlandImages] = useState([
+    '/images/swiss6.jpeg',
+    '/images/swiss7.jpeg',
+    '/images/swiss40.jpeg',
+    '/images/swiss33.jpeg',
+    '/images/swiss36.jpeg',
+    '/images/swiss55.jpeg',
+    '/images/swiss31.jpeg',
+    '/images/swiss50.jpeg',
+    '/images/swiss48.jpeg',
+    '/images/swiss51.jpeg',
+    '/images/swiss52.jpeg',
+    '/images/swiss22.jpeg',
+    '/images/swiss23.jpeg',
+    '/images/swiss24.jpeg',
+    '/images/swiss25.jpeg',
+    '/images/swiss26.jpeg'
+  ]);
   const [barcelonaImages, setBarcelonaImages] = useState([
     '/images/spain1.jpeg',
     '/images/spain2.jpeg',
@@ -10,18 +28,12 @@ const Hobbies = () => {
     '/images/spain5.jpeg'
   ]);
   const [italyImages, setItalyImages] = useState([
-    '/images/italy1.jpg',
-    '/images/italy2.jpg',
-    '/images/italy3.jpg'
-  ]);
-  const [switzerlandImages, setSwitzerlandImages] = useState([
-    '/images/swiss7.jpeg',
-    '/images/swiss22.jpeg',
-    '/images/swiss23.jpeg',
-    '/images/swiss24.jpeg',
-    '/images/swiss25.jpeg',
-    '/images/swiss26.jpeg',
-    '/images/swiss27.jpeg'
+    '/images/france10.jpeg',
+    '/images/france11.jpeg',
+    '/images/france8.jpeg',
+    '/images/france7.jpeg',
+    '/images/france2.jpeg',
+    '/images/france5.jpeg'
   ]);
   const [southafricaImages, setSouthafricaImages] = useState([
     '/images/sa1.jpeg',
@@ -65,6 +77,18 @@ const Hobbies = () => {
   return (
     <div className="hobbies-container">
       <h1>My Hobbies</h1>
+      <div className="hobbies-description">
+        <p>
+          Beyond my academic pursuits, I enjoy a variety of activities that help me maintain a balanced life. I love traveling and immersing myself in new cultures. I also find joy in playing soccer, getting lost in a good book, and watching movies. Living in the beautiful country of Switzerland, I take great pleasure in hiking and exploring its stunning landscapes. These experiences not only enrich my personal life but also inspire my professional work. Here is a collection of a few captivating places I have visited.
+        </p>
+      </div>
+      <div className="hobbies-row"
+        onMouseEnter={() => stopRotation(switzerlandIntervalRef)}
+        onMouseLeave={() => startRotation(switzerlandImages, setSwitzerlandImages, switzerlandIntervalRef)}>
+        {switzerlandImages.slice(0, 3).map((src, index) => (
+          <img key={index} src={src} alt={`Switzerland ${index + 1}`} className="hobby-image" />
+        ))}
+      </div>
       <div className="hobbies-row"
         onMouseEnter={() => stopRotation(barcelonaIntervalRef)}
         onMouseLeave={() => startRotation(barcelonaImages, setBarcelonaImages, barcelonaIntervalRef)}>
@@ -80,13 +104,6 @@ const Hobbies = () => {
         ))}
       </div>
       <div className="hobbies-row"
-        onMouseEnter={() => stopRotation(switzerlandIntervalRef)}
-        onMouseLeave={() => startRotation(switzerlandImages, setSwitzerlandImages, switzerlandIntervalRef)}>
-        {switzerlandImages.slice(0, 3).map((src, index) => (
-          <img key={index} src={src} alt={`Switzerland ${index + 1}`} className="hobby-image" />
-        ))}
-      </div>
-      <div className="hobbies-row"
         onMouseEnter={() => stopRotation(southafricaIntervalRef)}
         onMouseLeave={() => startRotation(southafricaImages, setSouthafricaImages, southafricaIntervalRef)}>
         {southafricaImages.slice(0, 3).map((src, index) => (
@@ -98,4 +115,5 @@ const Hobbies = () => {
 };
 
 export default Hobbies;
+
 
