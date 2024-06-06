@@ -8,13 +8,16 @@
   width: 100%;
   z-index: 1000;
   overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Ensure no wrapping in the header */
 }
 
 .header-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  justify-content: flex-start; /* Align buttons to the start */
+  overflow-x: auto; /* Ensure buttons can scroll horizontally */
+  flex-grow: 1; /* Allow the buttons container to take available space */
+  padding-left: 10px; /* Add padding to the left */
 }
 
 .profile-picture {
@@ -37,6 +40,7 @@
   border-radius: 5px;
   margin-right: 10px;
   white-space: nowrap; /* Prevent text from wrapping */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .header-button:hover:not(.active) {
@@ -46,6 +50,20 @@
 .header-button.active {
   background-color: green;
 }
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .header {
+    justify-content: flex-start; /* Align everything to the start */
+  }
+  .header-buttons {
+    flex-grow: 1;
+    justify-content: flex-start;
+    overflow-x: auto; /* Ensure buttons can scroll horizontally */
+    padding-left: 10px; /* Keep padding on smaller screens */
+  }
+}
+
 
 
   
