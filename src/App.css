@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-root {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  padding-top: 60px; /* Add space at the top */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.chatbot-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* Adjust size and other styles as needed */
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    ul {
+      list-style-type: none; /* Remove bullet points */
+      padding: 0;
+    }
+
+    a {
+      color: #1e90ff; /* Change link color to blue */
+      text-decoration: none;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Space between icons */
+      margin-top: 10px;
+
+      a {
+        color: #bbb;
+
+        &:hover {
+          color: #fff;
+        }
+
+        svg {
+          transition: color 0.3s;
+        }
+      }
+    }
+
+    .fa-linkedin {
+      color: #0077b5; /* LinkedIn blue color */
+    }
+
+    .fa-github {
+      color: #f5f5f5; /* Change GitHub icon color to light grey */
+    }
+
+    .fa-envelope {
+      color: #d44638; /* Gmail color */
+    }
+
+    .fa-instagram {
+      color: #c13584; /* Instagram color */
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
   }
 }
+

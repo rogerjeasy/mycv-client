@@ -19,7 +19,7 @@ const Header = () => {
       <Button className="header-button" onClick={() => handleNavigation('/publications')}>Publications</Button>
       <Button className="header-button" onClick={() => handleNavigation('/hobbies')}>Hobbies</Button>
       <Button className="header-button" onClick={() => handleNavigation('/contact')}>Contact</Button>
-      <img src={"/images/profile.png"} alt="Profile" className="profile-picture" />
+      <img src={"/images/roger_3.jpeg"} alt="Profile" className="profile-picture" />
     </div>
   );
 };

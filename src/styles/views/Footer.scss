@@ -1,58 +1,88 @@
-// src/styles/views/Footer.scss
-
 .footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  
-    .footer-content {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    ul {
+      list-style-type: none; /* Remove bullet points */
+      padding: 0;
+    }
+
+    a {
+      color: #1e90ff; /* Change link color to blue */
+      text-decoration: none;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .social-icons {
       display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-  
-      .footer-section {
-        flex: 1;
-        margin: 10px;
-  
-        h2 {
-          margin-bottom: 15px;
-          font-size: 1.2rem;
-          text-transform: uppercase;
+      justify-content: center;
+      gap: 20px; /* Space between icons */
+      margin-top: 10px;
+
+      a {
+        color: #bbb;
+
+        &:hover {
+          color: #fff;
         }
-  
-        p, ul, li, a {
-          color: #bbb;
-          font-size: 0.9rem;
-        }
-  
-        a {
-          text-decoration: none;
+
+        svg {
           transition: color 0.3s;
-  
-          &:hover {
-            color: white;
-          }
-        }
-  
-        ul {
-          list-style: none;
-          padding: 0;
-  
-          li {
-            margin-bottom: 10px;
-          }
         }
       }
     }
-  
-    .footer-bottom {
-      border-top: 1px solid #444;
-      padding-top: 10px;
-      font-size: 0.8rem;
+
+    .fa-linkedin {
+      color: #0077b5; /* LinkedIn blue color */
+    }
+
+    .fa-github {
+      color: #f5f5f5; /* Change GitHub icon color to light grey */
+    }
+
+    .fa-envelope {
+      color: #d44638; /* Gmail color */
+    }
+
+    .fa-instagram {
+      color: #c13584; /* Instagram color */
     }
   }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+  }
+}
+
+

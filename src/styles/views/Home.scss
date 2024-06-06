@@ -1,17 +1,108 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  padding-top: 60px; /* Add padding to prevent content from being hidden under the header */
+}
+
 .home-container {
-    position: relative;
-    padding: 20px;
+  width: 90%; /* Use relative width */
+  max-width: 1200px; /* Set a maximum width */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the h1 */
+  flex: 1; /* Allow it to grow and fill available space */
+}
+
+h1 {
+  color: #333;
+  text-align: center; /* Ensure h1 is centered */
+}
+
+.home-content {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.image-container {
+  flex: 0 0 30%; /* Use relative size for flexibility */
+  margin-right: 20px; /* Add margin to create space between containers */
+}
+
+.my-picture {
+  width: 100% !important; /* Make image take full width of container */
+  height: auto !important; /* Maintain aspect ratio */
+  object-fit: cover !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0 !important; /* Ensure no border radius to keep it square */
+}
+
+.description-container {
+  flex: 1 1 60%; /* Use relative size for flexibility */
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .chatbot-box {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px; /* Adjust the width as needed */
-    z-index: 1000; /* Ensure it is above other content */
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .image-container {
+    flex: 0 0 100%; /* Full width on smaller screens */
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  
+
+  .description-container {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+
+  .my-picture {
+    width: 100% !important; /* Adjust size for smaller screens */
+    height: auto !important; /* Maintain aspect ratio */
+  }
+
+  .description p {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

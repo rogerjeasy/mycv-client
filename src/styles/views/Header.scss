@@ -4,6 +4,10 @@
   display: flex;
   align-items: center; /* Center items vertically */
   justify-content: space-around;
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Position at the top */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays on top */
 }
 
 .profile-picture {
@@ -28,5 +32,6 @@
 .header-button:hover {
   background-color: green; /* Change color to green on hover */
 }
+
 
   
