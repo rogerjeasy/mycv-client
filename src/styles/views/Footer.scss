@@ -31,6 +31,9 @@
     ul {
       list-style-type: none; /* Remove bullet points */
       padding: 0;
+      display: flex; /* Set list to flex to align items in a row */
+      flex-wrap: wrap; /* Wrap items to next line if space is insufficient */
+      gap: 10px; /* Add gap between links for better separation */
     }
 
     a {
