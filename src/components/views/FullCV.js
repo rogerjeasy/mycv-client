@@ -6,7 +6,7 @@ const FullCV = () => {
         <div className="cv-container">
             <h1>Full CV</h1>
             <iframe
-                src="bav_roger_cv.pdf"
+                src="https://drive.google.com/file/d/1b9DyPxRyWI75UQJX_XVB1CtegmMD7tu9/preview"
                 title="Full CV"
                 width="100%"
                 height="600px"
