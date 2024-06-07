@@ -1,4 +1,4 @@
-name: Deploy Project to S3
+name: Deploy Project to S3 Hosting
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      - name: Deploy to S3
+      - name: Deploy to S3 Hosting
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_DOMAIN }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_DOMAIN }}
