@@ -71,6 +71,7 @@ const Contact = () => {
             type="text"
             name="firstName"
             value={formData.firstName}
+            placeholder='Type here...'
             onChange={handleChange}
             required
           />
@@ -81,6 +82,7 @@ const Contact = () => {
             type="text"
             name="lastName"
             value={formData.lastName}
+            placeholder='Type here...'
             onChange={handleChange}
           />
         </div>
@@ -90,6 +92,7 @@ const Contact = () => {
             type="tel"
             name="phone"
             value={formData.phone}
+            placeholder='Type here...'
             onChange={handleChange}
           />
         </div>
@@ -99,6 +102,7 @@ const Contact = () => {
             type="email"
             name="email"
             value={formData.email}
+            placeholder='Type here...'
             onChange={handleChange}
             required
           />
