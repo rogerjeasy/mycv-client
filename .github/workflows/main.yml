@@ -24,15 +24,15 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      # - name: Deploy to S3 Hosting
-      #   env:
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_DOMAIN }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_DOMAIN }}
-      #     AWS_REGION: ${{ secrets.AWS_REGION_DOMAIN }}
-      #     S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME_DOMAIN }}
-      #   run: |
-      #     echo "Deploying to S3..."
-      #     aws s3 sync build/ s3://${{ secrets.S3_BUCKET_NAME_DOMAIN }} --delete
+      - name: Deploy to S3 Hosting
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_DOMAIN }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_DOMAIN }}
+          AWS_REGION: ${{ secrets.AWS_REGION_DOMAIN }}
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME_DOMAIN }}
+        run: |
+          echo "Deploying to S3..."
+          aws s3 sync build/ s3://${{ secrets.S3_BUCKET_NAME_DOMAIN }} --delete
 
 
       - name: Deploy to S3 Hosting with WWW
