@@ -53,13 +53,15 @@
 
       a {
         color: #bbb;
+        transition: color 0.3s, transform 0.3s; /* Add transition for color and transform */
 
         &:hover {
           color: #fff;
+          transform: scale(0.9); /* Zoom out slightly on hover */
         }
 
         svg {
-          transition: color 0.3s;
+          transition: color 0.3s, transform 0.3s; /* Apply same transition to svg elements */
         }
       }
     }

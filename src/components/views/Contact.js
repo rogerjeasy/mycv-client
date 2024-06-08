@@ -66,7 +66,7 @@ const Contact = () => {
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
-          <label>First Name</label>
+          <label>First Name <span className="required">*</span></label>
           <input
             type="text"
             name="firstName"
@@ -97,7 +97,7 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <label>Email Address</label>
+          <label>Email Address <span className="required">*</span></label>
           <input
             type="email"
             name="email"
@@ -108,7 +108,7 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <label>Message</label>
+          <label>Message <span className="required">*</span></label>
           <textarea
             name="message"
             value={formData.message}
@@ -134,6 +134,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
 

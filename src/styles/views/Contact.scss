@@ -1,5 +1,3 @@
-/* Contact.scss */
-
 html, body {
   height: 100%;
   margin: 0;
@@ -86,6 +84,11 @@ html, body {
 .error-message {
   color: red;
   margin-top: 15px;
+}
+
+.required {
+  color: red;
+  margin-left: 5px;
 }
 
 .overlay {
