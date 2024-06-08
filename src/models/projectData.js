@@ -36,9 +36,9 @@ const projectsData = [
     ["https://github.com/lisungui/lisungui-server", "https://github.com/lisungui/client"],
     ["React", "Firebase", "Java Spring Boot", "Javascript", "Sass", "AWS (S3 and EC2)"],
     [
-      "Developed frontend using React",
+      "The current project is still at its early stage of development.",
       "Implemented the authentication with Google gmail, Github or Email/password for registering or loging",
-      "Implemented RESTful API with Express",
+      "Implemented RESTful APIs for server-side functionalities",
       "Integrated Firebase Cloud Store for data storage",
       "Deployed the application to Amazon Web Service"
     ]
