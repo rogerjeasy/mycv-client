@@ -24,7 +24,7 @@ const Contact = () => {
     setLoading(true); // Show loader when the send button is clicked
 
     try {
-      const response = await fetch('http://51.20.250.190:5000/send-email', {
+      const response = await fetch('https://mycv-12rg.onrender.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

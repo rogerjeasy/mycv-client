@@ -19,7 +19,7 @@ const ChatBotComponent = () => {
       setLoading(true);
 
       try {
-        const response = await fetch('http://51.20.250.190:5000/api/chat', {
+        const response = await fetch('https://mycv-12rg.onrender.com/api/chat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
