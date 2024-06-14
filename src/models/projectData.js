@@ -3,7 +3,7 @@ import Project from '../models/Project';
 const projectsData = [
   new Project(
     "Project: Personal Website",
-    "http://mycv-client.s3-website.eu-north-1.amazonaws.com/",
+    "http://www.rogerjeasy.com/",
     ["https://github.com/rogerjeasy/mycv-server", "https://github.com/rogerjeasy/mycv-client"],
     ["React", "Node.js", "Javascript", "Sass", "OpenAI", "AWS (S3 and EC2)", "Express"],
     [
