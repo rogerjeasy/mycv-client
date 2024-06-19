@@ -20,7 +20,7 @@ html, body {
 .contact-container {
   width: 90%; /* Use relative width */
   max-width: 600px; /* Set a maximum width */
-  margin: 0 auto;
+  margin: 40px auto; /* Increased top margin to create space */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -119,5 +119,4 @@ html, body {
     padding: 8px 16px;
   }
 }
-
 
