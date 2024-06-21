@@ -2,8 +2,8 @@ import Project from '../models/Project';
 
 const projectMLData = [
   new Project(
-    "Machine Learning Engineer Intern at Earkick",
-    " ",
+    "Machine Learning Engineer Intern at Earkick (Zurich, Switzerland)",
+    "",
     ["As a machine learning intern at Earkick, I worked on a project aimed at developing novel machine learning solutions to infer a person's mental health status from selfie videos, focusing on mood and anxiety prediction. We leveraged open-source video-based emotion recognition datasets and proprietary data from Earkick to train neural network models."],
     ["PyTorch", "OpenCV", "Python", "Git", "Hugging Face", "AWS", "Jupyter Notebook"],
     [
@@ -11,6 +11,19 @@ const projectMLData = [
       "Advanced feature engineering and preprocessing: Implemented sophisticated feature engineering and preprocessing techniques.",
       "Model development for emotion recognition: Spearheaded the training of video-based emotion recognition models, utilizing an open-source research dataset.",
       "Multimodal data integration: Successfully integrated audio data streams with image data to enrich the model’s input, allowing for more robust and comprehensive analysis in emotion recognition tasks."
+    ]
+  ),
+
+  new Project(
+    "PhD Research Project 1: Parallel Implementation of Gabor Wavelet Processing in PyTorch",
+    " ",
+    ["There exists an open-source package called Bob that implements the whole chain of Gabor wavelet processing for images in C++ with Python bindings. This package has been implemented by Manuel Gunther some years ago as part of Bob but it has been deactivated in the last version due to a restructuring and removal of all C++ implementations. In addition, it acks parallelization, hindering its efficiency, and does not support the incorporation of Gabor filters into modern deep learning methods. The goal is to leverage the PyTorch framework to implement the Gabor wavelet processing in the spatial domain and frequency domain, allowing for parallelization on the GPU to explore the full capability of Gabor waveletes."],
+    ["PyTorch", "Python", "Git", "Jupyter Notebook"],
+    [
+      "Implemented the Gabor wavelet family as an extension of the PyTorch Conv2d Module layer in spatial domain and an activation function to turn complex-valued responses into Euler representations. Thus, allows parallelization on the GPU which the current implementation does not have.",
+      "Managed to implement the Gabor wavelet processing in frequency domain using torch.fft for the FFT, reducing the running time by 60%. Thus, very suitable to solve computer vision tasks.",
+      "Implemented the concept of Gabor jets, which extract all responses at selected (or all) locations within an image, including the I/O functionatility",
+      "Integrated new various similarity functions to compare the Gabor jet responses, including the amplitude, Canberra, and disparity similarities. This allows for the comparison of the Gabor jet responses."
     ]
   ),
 
